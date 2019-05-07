@@ -1,0 +1,10 @@
+input {
+  pulsar {
+    bootstrap_servers => "pulsar://10.0.0.75:6650"
+    topics => ["generator_test"]
+  }
+}
+
+output {
+stdout { codec => "rubydebug" }
+}
