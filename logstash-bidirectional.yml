@@ -1,0 +1,20 @@
+
+input {
+  pulsar {
+    bootstrap_servers => "pulsar://10.0.0.75:6650"
+    topics => ["generator_test"]
+	codec => json
+  }
+}
+
+output {
+	pulsar {
+		bootstrap_servers => "pulsar://10.0.0.75:6650"
+		topic_id => "logstash_output_to_pulsar"
+		codec => json
+	}
+
+	stdout {
+		codec => rubydebug
+	}
+}
