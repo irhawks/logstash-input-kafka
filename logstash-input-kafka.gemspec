@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name            = 'logstash-input-kafka'
+  s.name            = 'logstash-input-kafka-pulsar'
   s.version         = '9.0.0'
   s.licenses        = ['Apache-2.0']
   s.summary         = "Reads events from a Kafka topic"
