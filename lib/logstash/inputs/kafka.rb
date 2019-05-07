@@ -47,8 +47,8 @@ require 'logstash-input-kafka_jars.rb'
 #
 # Kafka consumer configuration: http://kafka.apache.org/documentation.html#consumerconfigs
 #
-class LogStash::Inputs::Kafka < LogStash::Inputs::Base
-  config_name 'kafka'
+class LogStash::Inputs::Pulsar < LogStash::Inputs::Base
+  config_name 'pulsar'
 
   default :codec, 'plain'
 
@@ -233,7 +233,7 @@ class LogStash::Inputs::Kafka < LogStash::Inputs::Base
   end
 
   public
-  def kafka_consumers
+  def pulsar_consumers
     @runner_consumers
   end
 
@@ -356,4 +356,4 @@ class LogStash::Inputs::Kafka < LogStash::Inputs::Base
 
     props.put("sasl.kerberos.service.name",sasl_kerberos_service_name) unless sasl_kerberos_service_name.nil?
   end
-end #class LogStash::Inputs::Kafka
+end #class LogStash::Inputs::Pulsar
